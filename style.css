@@ -1,0 +1,184 @@
+/* ==== GLOBAL RESET ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ==== BODY ==== */
+body {
+  background: linear-gradient(-45deg, #000000, #1a0008, #33000f, #000000);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+  color: #fff;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* ==== HEADER ==== */
+header {
+  position: relative;
+  background: #000;
+  overflow: hidden;
+  text-align: center;           /* sab center me */
+  padding: 20px 0;              /* thoda spacing */
+  color: #fff;                  /* text white */
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;      /* buttons center */
+  gap: 15px;
+}
+
+nav button {
+  background: rgba(255,0,79,0.2);
+  border: 1px solid rgba(255,0,79,0.6);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+nav button:hover {
+  background: rgba(255,0,79,0.6);
+  transform: scale(1.05);
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,0,79,0.4), transparent);
+  animation: lightSweep 4s linear infinite;
+  z-index: 0;
+}
+
+header * {
+  position: relative;   /* ensure text above glow */
+  z-index: 1;
+}
+
+@keyframes lightSweep {
+  0% { left: -50%; }
+  100% { left: 100%; }
+}
+
+
+
+.logo {
+  width: 120px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 8px #ff004f);
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #ff004f;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #ff004f, 0 0 20px #ff004f;
+}
+
+/* ==== NAVIGATION ==== */
+nav {
+  margin-top: 10px;
+}
+
+nav button {
+  background: transparent;
+  border: 1px solid #ff004f;
+  color: #fff;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+nav button:hover,
+nav button.active {
+  background: #ff004f;
+  color: #fff;
+  box-shadow: 0 0 10px #ff004f, 0 0 20px #ff004f;
+}
+
+/* ==== VIDEO SECTION ==== */
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 40px 20px;
+}
+
+.video-card {
+  background: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 320px;
+  box-shadow: 0 0 15px rgba(255, 0, 79, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.video-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 79, 0.6);
+}
+
+video {
+  width: 100%;
+  border-bottom: 2px solid #ff004f;
+  display: block;
+}
+
+.video-card p {
+  text-align: center;
+  padding: 12px;
+  background: #1a1a1a;
+  font-size: 1rem;
+  color: #fff;
+  border-top: 1px solid #222;
+}
+
+/* ==== FOOTER ==== */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+  border-top: 1px solid #222;
+  margin-top: 40px;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .video-card {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  nav button {
+    margin: 4px;
+    padding: 6px 12px;
+  }
+}

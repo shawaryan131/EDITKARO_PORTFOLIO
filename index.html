@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EditKaro.in | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <img src="asset/logo(2).png" alt="EditKaro.in Logo" class="logo">
+    <h1>EditKaro.in Portfolio</h1>
+    <nav>
+      <button data-category="all">All</button>
+      <button data-category="short">Short Videos</button>
+      <button data-category="gaming">Gaming</button>
+      <button data-category="anime">Anime</button>
+    </nav>
+  </header>
+
+  <section class="video-container">
+    <!-- Short-form Edit -->
+    <div class="video-card" data-category="short">
+      <video src="asset/short1.mp4" controls></video>
+      <p>Short-form Edit</p>
+    </div>
+
+    <!-- Gaming Edit -->
+    <div class="video-card" data-category="gaming">
+      <video src="asset/gaming.mp4" controls></video>
+      <p>Gaming Edit</p>
+    </div>
+
+    <!-- Anime Edit -->
+    <div class="video-card" data-category="anime">
+      <video src="asset/anime.mp4.mp4" controls></video>
+      <p>Anime Edit</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
